@@ -34,17 +34,17 @@ fi
 # Options
 layout=`cat ${theme} | grep 'USE_ICON' | cut -d'=' -f2`
 if [[ "$layout" == 'NO' ]]; then
-	option_1=" Alacritty"
-	option_2=" Thunar"
-	option_3=" Geany"
-	option_4=" Ranger"
-	option_5=" Vim"
+	option_1=" Alacritty"
+	option_2=" Thunar"
+	option_3=" Geany"
+	option_4="󰐣 Ranger"
+	option_5="󰲶 Vim"
 else
-	option_1=""
-	option_2=""
-	option_3=""
-	option_4=""
-	option_5=""
+	option_1=""
+	option_2=""
+	option_3=""
+	option_4="󰐣"
+	option_5="󰲶"
 fi
 
 # Rofi CMD

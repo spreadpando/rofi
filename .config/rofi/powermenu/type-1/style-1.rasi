@@ -12,10 +12,13 @@ configuration {
     show-icons:                 false;
 }
 
+/* bar-font comes from theme.conf (bar_font) via theme-apply */
+@import "../../theme-fonts.rasi"
+
 /*****----- Global Properties -----*****/
 * {
-    font:                        "JetBrains Mono Nerd Font 8";
-    background:                  #101010;
+    font:                        @bar-font;
+    background:                  rgba(5, 19, 18, 0.73);
     background-alt:              #252525;
     foreground:                  #FFFFFF;
     selected:                    #3C474DFF;

@@ -26,7 +26,7 @@ configuration {
 
     prompt-font:                 "Iosevka Nerd Font Bold 32";
     textbox-font:                "Iosevka Nerd Font 12";
-    element-text-font:           "feather Bold 48";
+    element-text-font:           "Lilex Nerd Font Bold 48";
 
     /* Gradients */
     gradient-1:                  linear-gradient(45, #1E98FD, #06FDA5);

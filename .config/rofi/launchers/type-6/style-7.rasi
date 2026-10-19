@@ -11,13 +11,16 @@
 configuration {
 	modi:                       "drun,run,filebrowser,window";
     show-icons:                 true;
-    display-drun:               "APPS";
-    display-run:                "RUN";
-    display-filebrowser:        "FILES";
-    display-window:             "WINDOW";
+    display-drun:               "Apps";
+    display-run:                "Run";
+    display-filebrowser:        "Files";
+    display-window:             "Window";
 	drun-display-format:        "{name}";
 	window-format:              "{w} · {c} · {t}";
 }
+
+/* bar-font comes from theme.conf (bar_font) via theme-apply */
+@import "../../theme-fonts.rasi"
 
 /*****----- Global Properties -----*****/
 * {
@@ -111,6 +114,7 @@ mode-switcher{
     text-color:                  @foreground;
 }
 button {
+    font:                        @bar-font;
     padding:                     5px;
     border-radius:               3px;
     background-color:            @background-alt;

@@ -31,26 +31,26 @@ fi
 layout=`cat ${theme} | grep 'USE_ICON' | cut -d'=' -f2`
 if [[ "$layout" == 'NO' ]]; then
 	if [[ ${status} == *"[playing]"* ]]; then
-		option_1=" Pause"
+		option_1=" Pause"
 	else
-		option_1=" Play"
+		option_1=" Play"
 	fi
-	option_2=" Stop"
-	option_3=" Previous"
-	option_4=" Next"
-	option_5=" Repeat"
-	option_6=" Random"
+	option_2="󰝣 Stop"
+	option_3="󰼨 Previous"
+	option_4="󰼧 Next"
+	option_5="󰑖 Repeat"
+	option_6="󰒟 Random"
 else
 	if [[ ${status} == *"[playing]"* ]]; then
-		option_1=""
+		option_1=""
 	else
-		option_1=""
+		option_1=""
 	fi
-	option_2=""
-	option_3=""
-	option_4=""
-	option_5=""
-	option_6=""
+	option_2="󰝣"
+	option_3="󰼨"
+	option_4="󰼧"
+	option_5="󰑖"
+	option_6="󰒟"
 fi
 
 # Toggle Actions
@@ -62,7 +62,7 @@ if [[ ${status} == *"repeat: on"* ]]; then
 elif [[ ${status} == *"repeat: off"* ]]; then
     urgent="-u 4"
 else
-    option_5=" Parsing Error"
+    option_5=" Parsing Error"
 fi
 # Random
 if [[ ${status} == *"random: on"* ]]; then
@@ -70,7 +70,7 @@ if [[ ${status} == *"random: on"* ]]; then
 elif [[ ${status} == *"random: off"* ]]; then
     [ -n "$urgent" ] && urgent+=",5" || urgent="-u 5"
 else
-    option_6=" Parsing Error"
+    option_6=" Parsing Error"
 fi
 
 # Rofi CMD
@@ -93,13 +93,13 @@ run_rofi() {
 # Execute Command
 run_cmd() {
 	if [[ "$1" == '--opt1' ]]; then
-		mpc -q toggle && notify-send -u low -t 1000 " `mpc current`"
+		mpc -q toggle && notify-send -u low -t 1000 "󰽴 `mpc current`"
 	elif [[ "$1" == '--opt2' ]]; then
 		mpc -q stop
 	elif [[ "$1" == '--opt3' ]]; then
-		mpc -q prev && notify-send -u low -t 1000 " `mpc current`"
+		mpc -q prev && notify-send -u low -t 1000 "󰽴 `mpc current`"
 	elif [[ "$1" == '--opt4' ]]; then
-		mpc -q next && notify-send -u low -t 1000 " `mpc current`"
+		mpc -q next && notify-send -u low -t 1000 "󰽴 `mpc current`"
 	elif [[ "$1" == '--opt5' ]]; then
 		mpc -q repeat
 	elif [[ "$1" == '--opt6' ]]; then
